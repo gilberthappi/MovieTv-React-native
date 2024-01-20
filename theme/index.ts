@@ -1,11 +1,25 @@
 // you can change these colors to change the look of the app ;)
 export const theme = {
    background: '#eab308',
-   text: '#eab308'
+   text: '#eab308',
+   Black: '#000000',
+   BlackRGB10: 'rgba(0,0,0,0.1)',
+   Orange: '#FF5524',
+   OrangeRGBA0: 'rgba(255,85,36,0)',
+   Grey: '#333333',
+   DarkGrey: '#0b0b0b',
+   Yellow: '#E1CD17',
+   White: '#FFFFFF',
+   WhiteRGBA75: 'rgba(255,255,255,0.75)',
+   WhiteRGBA50: 'rgba(255,255,255,0.50)',
+   WhiteRGBA32: 'rgba(255,255,255,0.32)',
+   WhiteRGBA15: 'rgba(255,255,255,0.15)',
+   
 }
 export const styles = {
    text: {color: theme.text},
-   background: {backgroundColor: theme.background}
+   background: {backgroundColor: theme.background},
+   white: {color: theme.White},
 }
 interface Spacing {
    space_2: number;

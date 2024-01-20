@@ -44,6 +44,10 @@ export default function HomeScreen() {
     if(data && data.results) setTopRated(data.results);
   }
 
+  const handleIconClick = () => {
+    // Navigate to the UserProfile screen
+    navigation.navigate('UserProfile');
+  };
 
 
   return (
@@ -52,7 +56,10 @@ export default function HomeScreen() {
       <SafeAreaView className={ios? "-mb-2": "mb-3"}>
         <StatusBar style="light" />
         <View className="flex-row justify-between items-center mx-4">
-          <Bars3CenterLeftIcon size="30" strokeWidth={2} color="white" />
+        <TouchableOpacity onPress={handleIconClick}>
+      <Bars3CenterLeftIcon size="30" strokeWidth={2} color="white" />
+    </TouchableOpacity>
+
           <Text 
             className="text-white text-3xl font-bold">
               <Text style={styles.text}>M</Text>ovies
@@ -84,9 +91,12 @@ export default function HomeScreen() {
           </ScrollView>
         )
       }
+
+      
       
   </View>
       
+
 
    
   )
