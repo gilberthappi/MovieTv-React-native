@@ -6,6 +6,7 @@ import { ArrowLeftIcon, ChevronLeftIcon } from 'react-native-heroicons/outline';
 import { HeartIcon} from 'react-native-heroicons/solid';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Cast from '../components/cast';
+// import SeatBookingScreen from './SeatBookingScreen';
 import MovieList from '../components/movieList';
 import { fallbackMoviePoster, fetchMovieCredits, fetchMovieDetails, fetchSimilarMovies, image500 } from '../api/moviedb';
 import { styles, theme, BORDERRADIUS,
@@ -37,6 +38,8 @@ export default function MovieScreen() {
     getSimilarMovies(item.id);
   },[item]);
 
+ 
+
   const getMovieDetials = async id=>{
     const data = await fetchMovieDetails(id);
     console.log('got movie details');
@@ -59,6 +62,12 @@ export default function MovieScreen() {
     if(data && data.results){
         setSimilarMovies(data.results);
     }
+ 
+
+    // const handleButtonClick = () => {
+    //   // Navigate to the UserProfile screen
+    //   navigation.navigate('SeatBooking');
+    // };
 
   }
   return (
@@ -161,13 +170,12 @@ export default function MovieScreen() {
 <View>
           <TouchableOpacity
             style={localStyles.buttonBG}
-            onPress={() => {
-              navigation.push('SeatBooking', {
-                movie: item,
-                                
-              });
-            }}>
-            <Text style={localStyles.buttonText}>Select Seats</Text>
+            onPress={()=> navigation.navigate('SeatBooking')}>
+          {/* //   onPress={async (handleButtonClick) => {
+          // await schedulePushNotification();
+        {/* }} */}
+    
+            <Text style={localStyles.buttonText}>Book Seats</Text>
           </TouchableOpacity>
         </View>
 

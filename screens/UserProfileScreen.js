@@ -1,16 +1,15 @@
+
 import React from 'react';
 import { View, Text, Image, Dimensions, TouchableOpacity, ScrollView, Platform, StyleSheet, StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { ArrowLeftIcon, ChevronLeftIcon, HomeIcon } from 'react-native-heroicons/outline';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { HeartIcon} from 'react-native-heroicons/solid';
-// import AppHeader from '../components/AppHeader';
+
 import SettingComponent from '../components/SettingComponent';
 
 
 import { styles, theme, BORDERRADIUS,
   COLORS,
-  FONTFAMILY,
   FONTSIZE,
   SPACING, } from '../theme';
 
@@ -40,13 +39,6 @@ export default function UserProfileScreen() {
         </SafeAreaView>
         <View style={localStyles.container}>
       <StatusBar hidden />
-      {/* <View style={localStyles.appHeaderContainer}>
-         <AppHeader
-          name="close"
-          header={'My Profile'}
-          // action={() => navigation.goBack()}
-        /> 
-      </View> */}
 
       <View style={localStyles.profileContainer}>
         <Image
@@ -108,7 +100,6 @@ const localStyles = StyleSheet.create({
     borderRadius: 80,
   },
   avatarText: {
-    fontFamily: FONTFAMILY.poppins_medium,
     fontSize: FONTSIZE.size_16,
     marginTop: SPACING.space_16,
     color: COLORS.White,
