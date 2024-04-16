@@ -23,7 +23,7 @@ const AuthScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      {/* <Image source={require('path/to/your/welcome/image.png')} style={styles.logo} /> */}
+    
       {showSignUpButton && (
         <TouchableOpacity style={styles.button} onPress={handleSignUp}>
           <Text style={styles.buttonText}>Sign Up</Text>
