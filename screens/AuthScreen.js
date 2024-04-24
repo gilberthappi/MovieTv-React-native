@@ -1,5 +1,4 @@
 // AuthScreen.js
-
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
