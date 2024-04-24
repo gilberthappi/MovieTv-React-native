@@ -48,7 +48,6 @@ export default function PersonScreen() {
     <ScrollView 
         className="flex-1 bg-neutral-900" 
         contentContainerStyle={{paddingBottom: 20}}>
-        {/* back button */}
         <SafeAreaView 
             className={"flex-row justify-between items-center mx-4 z-10 "+verticalMargin}>
             <TouchableOpacity style={styles.background} className="rounded-xl p-1" onPress={()=> navigation.goBack()}>
